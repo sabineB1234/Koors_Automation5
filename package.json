@@ -1,0 +1,32 @@
+{
+  "name": "koors_automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "npx cypress open --browser chrome headless --config viewportWidth=1500 viewportHeight=1320",
+    "cy:run": "npx cypress open --browser chrome headless --config viewportWidth=1500 viewportHeight=1320"
+  },
+  "keywords": [],
+  "author": "nadine",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.13.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinations": true,
+    "stepDefinitions": "cypress/e2e/"
+  },
+  "dependencies": {
+    "gherkin": "^9.0.0"
+  },
+  "chromeWebSecurity": false,
+  "baseUrl": "http://localhost:3000",
+  "viewportWidth": 1280,
+  "viewportHeight": 720
+}
