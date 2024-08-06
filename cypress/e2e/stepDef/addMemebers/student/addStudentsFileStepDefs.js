@@ -44,8 +44,8 @@ And(/^I verify(.*)import students file text is visible/,(importfiletext) => {
 }); 
 
 And(/^I click on select a file button and downloard a file/, () => {
-  const filePath = 'cypress/fixtures/Studentslist.xlsx'; 
-  addStudentsFileActions.clickOnSelectStudentFileButton(filePath);
+  const fileName = 'Studentslist.xlsx'; 
+  addStudentsFileActions.clickOnSelectStudentFileButton(fileName);
 });
 
 And(/^I click on checkbox/, () => {
@@ -69,8 +69,8 @@ Then(/^I verify I am on student page/, () => {
 });
 
 And(/^I click on select file button and downloard an empty file/, () => {
-  const emptyfilePath = 'cypress/fixtures/Studentslist.xlsx'; 
-  addStudentsFileActions.clickOnSelectStudentEmptyFileButton(emptyfilePath);
+  const emptyfilename = 'emptyfile.xlsx'; 
+  addStudentsFileActions.clickOnSelectStudentEmptyFileButton(emptyfilename);
 });
 
 And(/^I verify (.*) error add file text is visible/,(addfileerrortext) => {
@@ -92,3 +92,6 @@ And(/^I click on annuler button to cancil/, () => {
 And(/^I verify number on students (.*)on stuents page/,(numberstudentstwo) => {
   addStudentsFileActions.VerifyNumberStudentsFileAddsTwo (numberstudentstwo)
 }); 
+
+
+

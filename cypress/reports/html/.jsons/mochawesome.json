@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-24T10:03:16.583Z",
+    "end": "2024-07-24T10:04:56.909Z",
+    "duration": 100326,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "245f9025-2ea0-4e67-88c6-b866c50b10a6",
+      "title": "",
+      "fullFile": "cypress/e2e/features/addMemebers/student/AddStudentsFIle.feature",
+      "file": "cypress/e2e/features/addMemebers/student/AddStudentsFIle.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a124950e-f129-45ff-991f-8b4c0a3cfd57",
+          "title": "Director adds new student with valid and invalid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successful students file add",
+              "fullTitle": "Director adds new student with valid and invalid credentials Successful students file add",
+              "timedOut": null,
+              "duration": 27726,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "2c47be74-5222-41e7-a4ae-f07c2e82894d",
+              "parentUUID": "a124950e-f129-45ff-991f-8b4c0a3cfd57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful students file add",
+              "fullTitle": "Director adds new student with valid and invalid credentials Unsuccessful students file add",
+              "timedOut": null,
+              "duration": 19367,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "35ecafb4-5f15-4959-bc96-de942ac068eb",
+              "parentUUID": "a124950e-f129-45ff-991f-8b4c0a3cfd57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsuccessful students add with empty file",
+              "fullTitle": "Director adds new student with valid and invalid credentials Unsuccessful students add with empty file",
+              "timedOut": null,
+              "duration": 28247,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5d88d5b1-d827-428a-aaa4-02821db4b2b4",
+              "parentUUID": "a124950e-f129-45ff-991f-8b4c0a3cfd57",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cancil students file add",
+              "fullTitle": "Director adds new student with valid and invalid credentials Cancil students file add",
+              "timedOut": null,
+              "duration": 21867,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "5a6d7a35-6e57-4ea8-9c8b-e3a8dd80d25b",
+              "parentUUID": "a124950e-f129-45ff-991f-8b4c0a3cfd57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c47be74-5222-41e7-a4ae-f07c2e82894d",
+            "35ecafb4-5f15-4959-bc96-de942ac068eb",
+            "5d88d5b1-d827-428a-aaa4-02821db4b2b4",
+            "5a6d7a35-6e57-4ea8-9c8b-e3a8dd80d25b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 97207,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Koors / SlashUp",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

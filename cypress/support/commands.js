@@ -25,14 +25,4 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import 'cypress-file-upload';
 
-Cypress.Commands.add('attachFile', { prevSubject: 'element' }, (subject, filePath, fileName) => {
-    cy.fixture(filePath, 'base64').then(content => {
-        const el = subject[0];
-        const blob = Cypress.Blob.base64StringToBlob(content, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        const testFile = new File([blob], fileName);
-        const dataTransfer = new DataTransfer();
-        dataTransfer.items.add(testFile);
-        el.files = dataTransfer.files;
-        return subject;
-    });
-});
+

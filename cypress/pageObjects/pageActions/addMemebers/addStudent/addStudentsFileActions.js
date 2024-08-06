@@ -21,8 +21,7 @@ clickOnImprStudentFileButton() {
   }
 
 verifyVisibilityImportStudentsFileText (importfiletext) {
-  
-  cy.get(selectorsAddStudentsFile.InputImporterLalisteMessage)
+    cy.get(selectorsAddStudentsFile.InputImporterLalisteMessage)
     .invoke('text')
     .then((text) => {
     cy.log('The messgage is: '+ text);
@@ -31,13 +30,12 @@ verifyVisibilityImportStudentsFileText (importfiletext) {
     });
   }
 
-clickOnSelectStudentFileButton(filePath) { 
-    cy.wait(2000); 
+clickOnSelectStudentFileButton(fileName) { 
     cy.contains ('button' ,'SÉLECTIONNER UN FICHIER')
     .click({ force: true });
     cy.readFile('cypress/fixtures/Studentslist.xlsx').should('exist');
    // cy.get(selectorsAddStudentsFile.SelectFichierButton).click({force: true });
-    cy.get('input[type="file"]').attachFile(filePath);
+    cy.get('input[type="file"]').attachFile(fileName);
     cy.wait(2000);
   }
 
@@ -49,21 +47,22 @@ clickOnCheckBoxButton() {
 clickOnContinueButton() { 
     cy.wait(2000);
     //cy.get(selectorsAddStudentsFile.buttonContinuer)
-    cy.contains ('button' ,'Continuer')
+    cy.contains('button', 'Continuer')
     .click({ multiple: true, force: true });
   }
 
 clickOnSendInvitationsButton() { 
     cy.wait(2000);
-    //cy.get(selectorsAddStudentsFile.buttonEnvoyerInvitation)
-    cy.contains ('button' ,'ENVOYER LES INVITATIONS')
+    cy.get(selectorsAddStudentsFile.buttonEnvoyerInvitation)
+    //cy.contains ('button' ,'ENVOYER LES INVITATIONS')
     .click({ multiple: true, force: true });
   }
 
 clickOnConfirmAndsendButton() { 
     cy.wait(2000);
-    //cy.get(selectorsAddStudentsFile.buttonConfirmerEnvoyer)
-    cy.contains ('button' ,'CONFIRMER ET ENVOYER')
+    cy.get(selectorsAddStudentsFile.buttonConfirmerEnvoyer)
+    //cy.contains ('button' ,'CONFIRMER ET ENVOYER')
+    //cy.contains('button', 'Envoyer les invitations')
     .click({ multiple: true, force: true });
    
   }
@@ -72,14 +71,15 @@ VerifyVisibilityOfStudentPage() {
     cy.url().should("include", "/students/all");
   }
 
-clickOnSelectStudentEmptyFileButton(emptyfilePath) { 
+clickOnSelectStudentEmptyFileButton(emptyfileName) { 
     cy.wait(2000); 
     //cy.get(selectorsAddStudentsFile.SelectFichierButton).click({force: true });
-    cy.contains ('button' ,'SÉLECTIONNER UN FICHIER')
+    cy.contains('button', 'SÉLECTIONNER UN FICHIER')
     .click({ force: true });
     cy.readFile('cypress/fixtures/Studentslist.xlsx').should('exist');
-    cy.get('input[type="file"]').attachFile(emptyfilePath);
+    cy.get('input[type="file"]').attachFile(emptyfileName);
     cy.wait(2000);
+  
   }
 
 verifyVisibilityAddFileErrorText (addfileerrortext) {

@@ -18,7 +18,7 @@ And(/^I am on the Activity page/,() => {
   loginActions.VerifyVisibilityOfActivityPage();
   });
 
-Then(/^I click on add formation button/,() => {
+Then(/^I click on formation button to choose/,() => {
   chooseTrainingCourse.clickOnFormationButton();
     });
   
@@ -46,7 +46,7 @@ And(/^I fill name course in search input (.*) and click/, (coursname) => {
   chooseTrainingCourse.sendTrainingCourseName(coursname);
 });
 
-And(/^I click on cypress course/,() => {
+And(/^I click on Cypress course/,() => {
   chooseTrainingCourse.clickOnAValiderButton ();
    });
 
@@ -58,7 +58,21 @@ And(/^I verify statut cypress course (.*)/,(statutmessage) => {
   chooseTrainingCourse.getStatutMessage(statutmessage);
    });
 
-Then(/^I verify the text (.*)/,(aucuneformationmsg) => {
-    chooseTrainingCourse.getNomberFormationsMessage(aucuneformationmsg);
+And(/^I click first appearing course/, () => {
+    cy.get('.table-white', { timeout: 10000 }).contains('À valider').click();
+ });
+
+And(/^I validate/,() => {
+  chooseTrainingCourse.clickOnValiderButton();
      });
+
+Then (/^I should see Cours publié avec succés/,() => {
+  chooseTrainingCourse.getStatutMessage();
+       });    
+      
+Then (/^I should see Cours publié avec succès/, ()=>{
+  chooseTrainingCourse.verifyVisibilityOfSuccessPublication() 
+     }); 
+   
+    
     

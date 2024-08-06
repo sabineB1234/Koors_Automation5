@@ -15,11 +15,13 @@ const selectorsAddStudent = {
 
     //inputName : 'input[placeholder="Nom"]',
     inputName : ':nth-child(1) > .form-control',
+    
     //inputFirstName : 'input[placeholder="Prénom"]',
     inputFirstName : '.mt-4 > :nth-child(2) > .form-control',
-    inputEmail : 'input[placeholder="E-mail"]',
-    //inputEmail : ':nth-child(3) > .form-control',
-    
+
+    //inputEmail : 'input[placeholder="E-mail"]',
+    inputEmail : ':nth-child(3) > .form-control',
+
     //inputNameErrorMessage :'' ,
     //inputFirstNameErrorMessage :'' ,
 
@@ -31,7 +33,8 @@ const selectorsAddStudent = {
     
     //buttonValidate : '.btn-Primary.large.success',
     buttonValidate : '.mt-4 > .d-flex > .btn-Primary',
-    buttonVRetour : '.mb-5 > .btn-Primary',
+    
+    ButtonRetour : '.mb-5 > .btn-Primary',
 
     //buttonCancil : '.btn-Secondary.large.me-3',
     buttonCancil : ':nth-child(1) > .mt-4 > .d-flex > .btn-Secondary',
@@ -43,7 +46,7 @@ const selectorsAddStudent = {
     //DeleteStudentButton : '',
     //AnnulerInvitationButton : '',
 
-
+ 
 };
  
 export default selectorsAddStudent ;

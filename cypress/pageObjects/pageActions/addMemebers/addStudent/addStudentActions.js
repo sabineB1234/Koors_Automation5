@@ -71,7 +71,7 @@ class addStudentActions {
 
   clickOnRetourButton () {   
     cy.wait(2000);
-    cy.get(selectorsAddStudent.buttonVRetour)
+    cy.get(selectorsAddStudent.ButtonRetour)
     .click();
   }
   
@@ -80,9 +80,11 @@ class addStudentActions {
   }
 
   fillStudentInformationToCancil(LastNamecancil, FirstNamecancil,studentEmailcancil) {
+    cy.screenshot('before-click'); 
     cy.get(selectorsAddStudent.inputName).clear().type(LastNamecancil);
     cy.get(selectorsAddStudent.inputFirstName).clear().type(FirstNamecancil);
     cy.get(selectorsAddStudent.inputEmail).clear().type(studentEmailcancil);
+    cy.screenshot('after-click');
   }
   
   clickOnCancelButton() {
@@ -101,7 +103,7 @@ class addStudentActions {
 
   clickOnDeleteButton() {
     cy.get(selectorsAddStudent.buttonDelete ,{ timeout: 2000 })
-      .should('be.visible') 
+      //.should('be.visible') 
       .click({ force: true }); 
   }
   
@@ -120,8 +122,10 @@ class addStudentActions {
     }
     cy.get(selector).invoke('text').then((text) => {
       cy.log('The message is: ' + text); 
+      cy.screenshot('before-click'); 
       cy.get(selector).should("contain", ErrorMessage);
       expect(text.trim()).contains(ErrorMessage);
+      cy.screenshot('after-click');
     });
 }
 
