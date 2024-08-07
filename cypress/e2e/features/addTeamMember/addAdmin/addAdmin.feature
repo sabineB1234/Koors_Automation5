@@ -7,8 +7,6 @@ Background: Successful director Login
     And I click on the login button
     And I am on the Activity page
     #When I click on the checkbox button
-    And I click on professeur button 
-    Then I click on add formation button
 
 @SuccessfulAddAdminMember
 Scenario: add succecful admin memeber 
@@ -16,7 +14,7 @@ Scenario: add succecful admin memeber
     And I click on inviter un memebre button
     And I click on administrateur button
     And I fill e-mail admin 
-    And I click on valider button on admin popup
+    And I click on ENVOYER button on admin PopUp
     And I click on ok button 
     Then I verify I am on equipe page 
 
@@ -25,7 +23,7 @@ Scenario: add invalid admin memeber
     When I click on equipe button
     And I click on inviter un memebre button
     And I click on administrateur button
-    And I fill invalid e-mail admin 
+    And I fill invalid e-mail admin sabine.com
     And I verify error message equal to Veuillez saisir une adresse email valide.
     And I click on annuler buton on admin popup 
     Then I verify I am on equipe page 
