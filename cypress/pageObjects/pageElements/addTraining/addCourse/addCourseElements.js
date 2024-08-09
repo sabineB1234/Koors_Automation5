@@ -7,13 +7,14 @@ const selectorsAddCourse = {
     professorButton : '#go-to-prof-role',
     buttonCheckBox : '#step-change-role_director',
     InputTitle : '#title',
-    InputThematique : '#my-courses-container > :nth-child(4) > :nth-child(2) > .MuiFormControl-root > .jss13 > .MuiInputBase-root',
-    
+    //InputThematique : '#my-courses-container > :nth-child(4) > :nth-child(2) > .MuiFormControl-root > .jss13 > .MuiInputBase-root',
+    InputThematique : '#my-courses-container > :nth-child(4) > :nth-child(2) > .MuiFormControl-root > .jss14 > .MuiInputBase-root > .MuiInputBase-input',
     buttonIntermediare :'[for="intermediate"]',
     InputResumeIntroduction : '.ql-container',
     InputObjectifsPedagogique : '#textAreaobjectives',
     InputPrerequis : '#textAreaprerequisite',
-    InputConnaissanceCompetence : '.skills-form-professor > :nth-child(2) > .MuiFormControl-root > .jss13 > .MuiInputBase-root > .MuiInputBase-input',
+    InputConnaissanceCompetence : '.skills-form-professor > :nth-child(2) > .MuiFormControl-root > .jss14 > .MuiInputBase-root > .MuiInputBase-input',
+    
     BonneReponseBUtton : ':nth-child(2) > .d-flex > [style="margin: 0px;"] > .btn-Secondary',
     InputURL : '.form-control',
     IntegrerVideoButton :'.btn-Primary',
